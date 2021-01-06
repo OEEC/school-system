@@ -1,0 +1,8 @@
+.self {
+    position: absolute;
+    height: 50%;
+    width: 50%;
+    translate-top: 50%;
+    translate-left: 50%;
+    transform: translate(50%, 50%);
+  }
