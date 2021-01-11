@@ -3,7 +3,7 @@
 use Illuminate\Database\Seeder;
 use Carbon\Carbon;
 
-class UserSeeder extends Seeder
+class RoleSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -12,24 +12,21 @@ class UserSeeder extends Seeder
      */
     public function run()
     {
-        DB::table('users')->insert([
+        DB::table('roles')->insert([
+            'type' => 1,
             'name' => 'Director',
-            'email' => 'director@gmail.com',
-            'password' => Hash::make('12345678'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-        DB::table('users')->insert([
+        DB::table('roles')->insert([
+            'type' => 2,
             'name' => 'Maestro',
-            'email' => 'maestro@gmail.com',
-            'password' => Hash::make('12345678'),
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
-        DB::table('users')->insert([
-            'name' => 'Rogelio Perez',
-            'email' => 'rp@gmail.com',
-            'password' => Hash::make('12345678'),
+        DB::table('roles')->insert([
+            'type' => 3,
+            'name' => 'Alumno',
             'created_at' => Carbon::now(),
             'updated_at' => Carbon::now()
         ]);
